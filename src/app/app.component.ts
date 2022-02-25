@@ -16,4 +16,9 @@ export class AppComponent implements OnInit {
 
   devices: Device[] = [];
   name = 'Angular ' + VERSION.major;
+
+  toggleDevice(device: Device) {
+    device.status = device.status == 'off' ? 'on' : 'off';
+    this.devicesService.setDeviceStatus(device);
+  }
 }
