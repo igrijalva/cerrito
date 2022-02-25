@@ -46,10 +46,9 @@
   <div class="row">
     <div class="col container-fluid" name="pagebody">
       <ul class="list-group">
-        <li class="list-group-item">A simple default list group item</li>
-        <li class="list-group-item">A simple default list group item</li>
-        <li class="list-group-item">A simple default list group item</li>
-        <li class="list-group-item">A simple default list group item</li>
+        <li class="list-group-item" *ngFor="let device of devices; index as i">
+          {{ device.name }}
+        </li>
       </ul>
     </div>
   </div>
